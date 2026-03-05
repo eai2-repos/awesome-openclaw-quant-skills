@@ -1,59 +1,69 @@
 # Awesome OpenClaw Quant Skills
 
-> 说明：本 README 按“**网上检索** + **官方来源优先**”重做。
+> 说明：你给的 8 个名称在官方源里未检索到精确同名。下面改为“**同类高星资源 + 可替代技能归类**”。
 
-## 检索方法（本次）
+## A. 高星同类资源（网上可见）
 
-我按以下公开在线来源逐一检索了 8 个名称（精确词）：
+> 这些是“技能集合仓库”（不是单个 skill），适合当发现入口。
 
-1. OpenClaw 官方文档（Skills / ClawHub）
-   - https://docs.openclaw.ai/tools/skills
-   - https://docs.openclaw.ai/tools/clawhub
-2. OpenClaw 官方 skills 源码仓库目录
-   - https://github.com/openclaw/openclaw/tree/main/skills
-3. 社区聚合清单（来自 ClawHub 公开索引）
-   - https://github.com/VoltAgent/awesome-openclaw-skills
-4. 全网检索（Google）+ GitHub 公网检索（repo/code）
+| Repo | Stars（检索时） | 链接 | 说明 |
+|---|---:|---|---|
+| VoltAgent/awesome-openclaw-skills | 28k+ | https://github.com/VoltAgent/awesome-openclaw-skills | 最大的 OpenClaw skills 聚合清单（按分类整理）。 |
+| clawdbot-ai/awesome-openclaw-skills-zh | 2k+ | https://github.com/clawdbot-ai/awesome-openclaw-skills-zh | 中文向技能聚合与分类。 |
+| sundial-org/awesome-openclaw-skills | 300+ | https://github.com/sundial-org/awesome-openclaw-skills | 精选型 awesome 列表。 |
 
 ---
 
-## 结论（先说清楚）
+## B. 你的 8 个能力位 → 同类技能归类（可替代）
 
-- 这 8 个名字**没有检索到 OpenClaw 官方同名技能**（官方文档 + 官方仓库未见精确同名）。
-- 这 8 个名字更像是你定义的“量化分析工作流技能集命名”。
-- 因此本仓库定位为：**自定义方案（Custom Suite）+ 对齐 OpenClaw 官方技能规范发布**。
+> 来源优先选 OpenClaw 官方 skills 仓库路径（`github.com/openclaw/skills/tree/main/...`）。
+
+### 1) 行情/账户数据（对应 `market-data-fetch`）
+- `plaid`：https://github.com/openclaw/skills/tree/main/skills/jverdi/plaid/SKILL.md  
+  （金融账户/交易数据接口能力）
+- `sharesight-skill`：https://github.com/openclaw/skills/tree/main/skills/lextoumbourou/sharesight-skill/SKILL.md  
+  （组合持仓/投资跟踪）
+
+### 2) 基本面/财务结构化（对应 `fundamentals-parser`）
+- `sharesight-skill`（可用于投资组合财务视角）  
+- `expense-tracker-pro`：https://github.com/openclaw/skills/tree/main/skills/jhillin8/expense-tracker-pro/SKILL.md  
+  （财务数据结构化记录与统计）
+
+### 3) 舆情/信号输入（对应 `news-sentiment-scan`）
+- 可从高星 awesome 列表里的 Search/Research 分类筛选（入口）：  
+  https://github.com/VoltAgent/awesome-openclaw-skills
+
+### 4) 因子评分 / 事件冲击（对应 `factor-score-engine` / `event-impact-analyzer`）
+- 当前更建议走“组合式实现”：行情数据 skill + 研究/分析类 skill + 自定义评分逻辑（本 repo 可继续补模板）。
+
+### 5) 风控护栏（对应 `risk-guardrail`）
+- `tax-professional`：https://github.com/openclaw/skills/tree/main/skills/scottfo/tax-professional/SKILL.md  
+  （偏合规/税务约束，非交易风控）
+- `api-credentials-hygiene`：https://github.com/openclaw/skills/tree/main/skills/kowl64/api-credentials-hygiene/SKILL.md  
+  （偏安全护栏）
+
+### 6) 组合建议（对应 `portfolio-suggestion`）
+- `sharesight-skill`（投资组合管理与观察）
+
+### 7) 报告生成（对应 `report-generator`）
+- 可在 awesome 列表中优先查 `PDF & Documents` / `Data & Analytics` 分类：  
+  https://github.com/VoltAgent/awesome-openclaw-skills
 
 ---
 
-## 8 个 Skill 核查结果（重做版）
+## C. 官方基准入口（用于后续继续扩展）
 
-| Skill 名称 | 官方同名技能 | 官方原始地址（若有） | 当前建议介绍 |
-|---|---|---|---|
-| `market-data-fetch` | 未检索到 | 暂无可验证官方同名地址 | 行情数据抓取层：获取价格、成交量、市场快照等原始输入。 |
-| `fundamentals-parser` | 未检索到 | 暂无可验证官方同名地址 | 基本面解析层：提取财报指标与估值相关字段。 |
-| `news-sentiment-scan` | 未检索到 | 暂无可验证官方同名地址 | 新闻舆情层：对新闻/公告做情绪和主题扫描。 |
-| `factor-score-engine` | 未检索到 | 暂无可验证官方同名地址 | 因子评分层：汇总多信号生成可比较评分。 |
-| `event-impact-analyzer` | 未检索到 | 暂无可验证官方同名地址 | 事件冲击层：评估财报/政策/突发事件影响。 |
-| `risk-guardrail` | 未检索到 | 暂无可验证官方同名地址 | 风控护栏层：仓位、回撤、波动与止损约束。 |
-| `portfolio-suggestion` | 未检索到 | 暂无可验证官方同名地址 | 组合建议层：在风险约束下给出组合建议。 |
-| `report-generator` | 未检索到 | 暂无可验证官方同名地址 | 报告生成层：输出结构化投研结论与摘要。 |
+- OpenClaw Skills 规范：https://docs.openclaw.ai/tools/skills
+- ClawHub 说明：https://docs.openclaw.ai/tools/clawhub
+- 官方 skills 根目录：https://github.com/openclaw/openclaw/tree/main/skills
 
 ---
 
-## 可核验在线来源（用于复查）
+## D. 下一步建议（我可以继续代做）
 
-- OpenClaw Skills 规范（官方）: https://docs.openclaw.ai/tools/skills
-- ClawHub 说明（官方）: https://docs.openclaw.ai/tools/clawhub
-- OpenClaw 官方 skills 目录: https://github.com/openclaw/openclaw/tree/main/skills
-- 社区聚合（来自公开 registry 索引）: https://github.com/VoltAgent/awesome-openclaw-skills
-
-> 备注：在社区与全网中能找到“相似语义”的技能（如 market data / report generation 等），但未检索到与你这 8 个 slug **完全同名且可认定为 OpenClaw 官方技能** 的条目。
-
-## 发布定位建议
-
-仓库标题：`awesome-openclaw-quant-skills`
-
-副标题：`OpenClaw Quant Workflow Skills (Custom, aligned with official OpenClaw Skills spec)`
+如果你同意，我下一步直接给这个 repo 补一份：
+1. `skills-map.md`：把“8 能力位”各补 5~10 个候选 skill（含链接、适用场景、替代关系）  
+2. `quant-workflow-template.md`：给出可直接复制的量化工作流模板（数据→信号→评分→风控→报告）
 
 ## Disclaimer
 
